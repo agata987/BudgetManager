@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9720AB05-579A-42FD-89DF-2898A4D4CF56}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BudzetManager</RootNamespace>
+    <AssemblyName>BudzetManager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>this.icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BudzetManager.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Messaging">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_inc_outc_mainTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_inc_outc_mainTab.Designer.cs">
+      <DependentUpon>Add_inc_outc_mainTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoriesLimits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriesLimits.Designer.cs">
+      <DependentUpon>CategoriesLimits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckLimits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckLimits.Designer.cs">
+      <DependentUpon>CheckLimits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCategory.Designer.cs">
+      <DependentUpon>EditCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialSt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinancialSt.Designer.cs">
+      <DependentUpon>FinancialSt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forecast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forecast.Designer.cs">
+      <DependentUpon>Forecast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InAndOut_REG_mainTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InAndOut_REG_mainTab.Designer.cs">
+      <DependentUpon>InAndOut_REG_mainTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterMenu.Designer.cs">
+      <DependentUpon>RegisterMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginMenu.Designer.cs">
+      <DependentUpon>LoginMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySqlConnector.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManager.Designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_inc_outc_mainTab.resx">
+      <DependentUpon>Add_inc_outc_mainTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoriesLimits.resx">
+      <DependentUpon>CategoriesLimits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckLimits.resx">
+      <DependentUpon>CheckLimits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCategory.resx">
+      <DependentUpon>EditCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinancialSt.resx">
+      <DependentUpon>FinancialSt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forecast.resx">
+      <DependentUpon>Forecast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InAndOut_REG_mainTab.resx">
+      <DependentUpon>InAndOut_REG_mainTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginMenu.resx">
+      <DependentUpon>LoginMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterMenu.resx">
+      <DependentUpon>RegisterMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManager.resx">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="this.icon.ico" />
+    <None Include="Resources\reloadButton.png" />
+    <None Include="Resources\logib_icn.png" />
+    <None Include="Resources\users.png" />
+    <None Include="Resources\wallet.png" />
+    <None Include="Resources\hiclipart.com %283%29.png" />
+    <None Include="Resources\purple.png" />
+    <None Include="Resources\new_background_p.png" />
+    <None Include="Resources\register_backgr.png" />
+    <None Include="Resources\thisGray.png" />
+    <None Include="Resources\this.button.png" />
+    <None Include="Resources\Best Blur Background App Compare The Top 6 Blur Background Apps.jpg" />
+    <None Include="Resources\blue_blur.jpg" />
+    <Content Include="coins %281%29 %281%29.ico" />
+    <Content Include="iconapp.ico" />
+    <Content Include="Resources\coins %281%29 %281%29.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
