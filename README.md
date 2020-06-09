@@ -1,1 +1,1 @@
-# budzetManager
+# budgetManager, Windows Forms
